@@ -12,12 +12,12 @@ namespace WeatherApp
             var response = await client.GetAsync(queryString);
 
             dynamic data = null;
-            if (response != null)
+            if (response != null && response.IsSuccessStatusCode)
             {
                 string json = response.Content.ReadAsStringAsync().Result;
                 data = JsonConvert.DeserializeObject(json);
             }
-
+ 
             return data;
         }
 

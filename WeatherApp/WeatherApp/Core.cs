@@ -11,11 +11,6 @@ namespace WeatherApp
             string queryString = "http://api.openweathermap.org/data/2.5/weather?zip="
                 + zipCode + ",us&appid=" + key + "&units=imperial";
 
-            if (key == "cd092e69e02ef10ed6f393d44de1f3cf")
-            {
-                throw new ArgumentException("You must obtain an API key from openweathermap.org/appid and save it in the 'key' variable.");
-            }
-
             dynamic results = await DataService.GetDataFromService(queryString).ConfigureAwait(false);
 
             if (results["weather"] != null)

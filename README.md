@@ -1,4 +1,4 @@
 # WeatherApp
 
-Android Weather Application.
+Mobile Android Weather Application.
 Cross-platform application using Xamarin, 3rd party API.
